@@ -1,0 +1,178 @@
+File reservations:
+	SxDarkOne	-	ircmd.lua		-	Adding IRC Commands
+	
+Changelog:
+	2011-11-09	-	SxDarkOne	-	char.lua	-	Updated the commands !engie and !refundme to not-use the Z-Axis
+	2011-11-09	-	SxDarkOne	-	mf.lua		-	Added an option to Get_Distance to choose to calculate the Z-Axis or not
+	2011-11-05	-	SxDarkOne	-	modcmd.lua	-	Added !refundall <credits>
+	2011-11-04	-	SxDarkOne	-	modcmd.lua	-	Fixxed a bug with !dejail
+	2011-11-04	-	Release: 2011-11-04. Test = OK
+	2011-10-31	-	SxDarkOne	-	tc.lua		-	Removed the [Debug] Messages (Commented the lines that would send a message to the irc channel)
+	2011-10-28	-	SxDarkOne	-	lotto.lua	-	Fixxed a bug with the lotto (forgot tonumber())
+	2011-10-25	-	SxDarkOne	-	usercmd.lua	-	!callmod now has a time-out of 30 seconds instead of 10 seconds. Removed !onlinetime, changed !playtime to the same message as the new birthday message.
+	2011-10-25	-	SxDarkOne	-	veh.lua		-	Fixxed TroopTrans bot spawn.
+	2011-10-25	-	SxDarkOne	-	uc.lua		-	Nickspoof Warning Message now only comes when both the IP AND Serial doesn't match. Now also gives an irc-message that a player isn't a nickspoofer if that player has protect level > 0 and passes it! 
+														If protection level is 0 and the user has a password, it will also give an irc-message. Update the birthdaymessage.
+	2011-10-25	-	SxDarkOne	-	tc.lua		-	Removed the use of Tally_Team_Size (might be bugged). Now walks trough the user table to calculate both team sizes.
+	2011-10-25	-	SxDarkOne	-	lus.lua		-	Changed the way the Interest is given (no more custom timer script)
+	2011-10-25	-	SxDarkOne	-	mf.lua		-	Added the function FormatDate(timestamp)
+	2011-10-24	-	SxDarkOne	-	helpcmd.lua	-	Added !regen to !regens as a command to see the regens...
+	2011-10-24	-	SxDarkOne	-	vip.lua		-	Removed the !upx10 message from !buggybot and !hummerbot (copy/paste fail xD)
+	2011-10-24	-	SxDarkOne	-	lus.lua		-	Updated the building kill script with gi.AddBuildingKill(player).
+	2011-10-24	-	SxDarkOne	-	tc.lua		-	Changed the NP point removal for VIPs from 1 to 0.5, Added in a calculation to remove two NP's for each building killed by that player.
+	2011-10-24	-	SxDarkOne	-	gi.lua		-	Added the amount of buildings killed to the player info for use with the tc-er
+	2011-10-23	-	SxDarkOne	-	char.lua	-	Fixxed a bug with mrmoney which caused CPS problems and problems which caused players to be able to buy the mrmoney without having to pay cash.
+	2011-10-23	-	SxDarkOne	-	irc.lua		-	Fixxed a bug with the IRC Bot, not leaving certain channels.
+	2011-10-23	-	SxDarkOne	-	lus.lua		-	Mutantharvy now resets when a new level loads.
+	2011-10-22	-	SxDarkOne	-	tc.lua		-	Edited the team variable to check for value change by global variables... Fixxed some other bugs
+	2011-10-22	-	SxDarkOne	-	irc.lua		-	Default Channel check now lowers all characters.
+	2011-10-22	-	Release: 2011-10-22. Test = OK
+	2011-10-22	-	SxDarkOne	-	usercmd.lua	-	Added !uu and !uf
+	2011-10-22	-	SxDarkOne	-	modcmd.lua	-	Added !yesuu, !nouu
+	2011-10-22	-	SxDarkOne	-	uc.lua		-	Added SetUnstuck(State) en CanUnstuck(), used for !yesuu
+	2011-10-21	-	SxDarkOne	-	uc.lua		-	Added IsMrMoney() and SetMrMoney(State), used for the CPS Management.
+	2011-10-21	-	SxDarkOne	-	gi.lua		-	Added CPS Management. Updated all related to CPS to update the CPS trough the CPS Management
+	2011-10-21	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-21	-	SxDarkOne	-	char.lua	-	Added !refundme.
+	2011-10-21	-	SxDarkOne	-	privcmd.lua	-	Added !epic, rainbow, healthme, !test, !renegade.
+	2011-10-21	-	SxDarkOne	-	modcmd.lua	-	Added !jail, !dejail, !gdi, !nod, !0wn, !memory, !clearmem !refund (instead of give/take cash & bankrupt), !spawn, !last, !model, !getm, !youm, !setm, !getp, !toilet, !fly.
+	2011-10-21	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-21	-	SxDarkOne	-	vip.lua		-	Added !ago.
+	2011-10-21	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-21	-	SxDarkOne	-	char.lua	-	Updated Yuri to also get the max health & shield strength of the player killed
+	2011-10-21	-	SxDarkOne	-	vip.lua		-	Added !g3, !t3, !ambush, !zs.
+	2011-10-21	-	SxDarkOne	-	privcmd.lua	-	Added !forumgamble.
+	2011-10-20	-	SxDarkOne	-	vip.lua		-	Added !upx10, !hummerbot, !buggybot, !elitesquad, !ae.
+	2011-10-20	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-20	-	SxDarkOne	-	usercmd.lua	-	Added !buy1k
+	2011-10-20	-	SxDarkOne	-	bots.lua	-	Added !buyshockerbot
+	2011-10-20	-	SxDarkOne	-	build.lua	-	Added !buytibsilo
+	2011-10-20	-	Release: 2011-10-20. Test = OK
+	2011-10-20	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-20	-	SxDarkOne	-	char.lua	-	Added !c4tech, !prisoner, !aqollo, !ralph, !jumpy, !spy, !mrmoney, !darkorbit, !orphan, !rav, !mrmutant, !hotwire, !tech, !yuri, !sbh
+	2011-10-19	-	SxDarkOne	-	char.lua	-	Added !reddwire, !fsfox, !engie.
+	2011-10-19	-	SxDarkOne	-	upg.lua		-	Added !cobrasuit.
+	2011-10-19	-	SxDarkOne	-	lus.lua		-	Added the custom COBRA script
+	2011-10-19	-	SxDarkOne	-	uc.lua		-	Fixxed a bug in one of the queries that would get the wrong nickname and thus log in with wrong data. /facepalm
+	2011-10-18	-	SxDarkOne	-	char.lua	-	Added !petrova, !assassin.
+	2011-10-18	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-18	-	SxDarkOne	-	mf.lua		-	Changed CalcPos to CalcPos(pos, facing, distance, Add) (Z changed to Add), Add is a table that MAY contain numbers for X, Y or Z, so it'll manually add them. Updated every command that uses this function.
+	2011-10-18	-	SxDarkOne	-	build.lua	-	Added !gneg silo, !nneg silo, !gun, !cgring, !g, !g2, !t, !t2, !agt, !tib silo, !tesla, !cg, !cannon, !deathcannon, !wall.
+	2011-10-17	-	SxDarkOne	-	lus.lua		-	Fixxed a cause for a crash on OnLevelLoaded, in the wingame script. The cause was trying to get the player (mvp) object while the player was loading!
+	2011-10-17	-	SxDarkOne	-	uc.lua		-	Added the custom script repairtower
+	2011-10-17	-	SxDarkOne	-	build.lua	-	Added !artytower, !repairtower, !ait, !tg, !sam.
+	2011-10-17	-	SxDarkOne	-	lus.lua		-	Updated LuS_Attach_Scripts to be able to attach the same script multiple times, by putting multiple arguments in a table (scripts={arg, arg, arg})
+	2011-10-17	-	SxDarkOne	-	uc.lua		-	Added ShowNewb(pID) if a new account gets created because it's a new player that joined.
+	2011-10-17	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands. Added ShowNewb(pID) & the command !newb.
+	2011-10-17	-	SxDarkOne	-	bots.lua	-	Added !nodarmy, !gdiarmy, !rbot, !sbot, !nbot, !gbot, !rambot.
+	2011-10-16	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-16	-	SxDarkOne	-	bots.lua	-	Added !techbot, !hotbot.
+	2011-10-16	-	SxDarkOne	-	bots.lua	-	Added the argument "Scripts" to the MultiSpawn function. This should be a table containing scripts for LuS_Attach_Scripts
+	2011-10-16	-	Release: 2011-10-12. Test = OK
+	2011-10-16	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-16	-	SxDarkOne	-	bots.lua	-	Added !grbot, !nrbot, !rgbot, !rnbot, !gdicommander, !nodcommander. Changed them to use the MultiSpawn function.
+	2011-10-16	-	SxDarkOne	-	bots.lua	-	Added MultiSpawn(CenterObj, Preset, Units, Distance, Z, Random) for use with spawning multiple bots
+	2011-10-16	-	SxDarkOne	-	mf.lua		-	Added CalcPos(pos, facing, distance, Z)
+	2011-10-16	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-16	-	SxDarkOne	-	usercmd.lua	-	Added !gethp
+	2011-10-16	-	SxDarkOne	-	upg.lua		-	Added !up and !upv
+	2011-10-15	-	SxDarkOne	-	upg.lua		-	Updated all suits & regens to block if the player already has the upgrade.
+	2011-10-15	-	SxDarkOne	-	vip.lua		-	Updated !vipvehregen to refuse the upgrade if the vehicle already has a regen attached to it.
+	2011-10-15	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-15	-	SxDarkOne	-	usercmd.lua	-	Added !killme, players can only kill their vehicle if they're the driver. Removed the "killed theirselves" message, as Apply_Damage can take the player obj, so the bot will say the player killed theirselves. 
+														Also changed the Warhead to Laser, so petrova's should be able to kill themselves.
+	2011-10-15	-	SxDarkOne	-	helpcmd.lua	-	Updated the helpcommands
+	2011-10-15	-	SxDarkOne	-	vip.lua		-	Added !vipgamble
+	2011-10-15	-	SxDarkOne	-	uc.lua		-	Added :GetLastVipGamble() and :SetLastVipGamble(sec)
+	2011-10-15	-	SxDarkOne	-	gamble.lua	-	Added the gamble commands: !lowgamble, !chancegamble, !medgamble, !highgamble
+	2011-10-12	-	SxDarkOne	-	uc.lua		-	Anti-Nickspoof Warnings now give both the account serial hash and account ip when either of them doesn't match.
+	2011-10-12	-	SxDarkOne	-	I moved the data and lib folders to LuS_Cloud_Files, since there's no need for duplicates of those files imho. Saves a bit of space =p
+	2011-10-12	-	Release: 2011-10-12. Test = OK
+	2011-10-11	-	SxDarkOne	-	upg.lua		-	Added !nukesuit, !killsuit, !ss and !absorbsuit.
+	2011-10-11	-	SxDarkOne	-	vip.lua		-	Added !vipvehregen. Currently 5000 credits and heals for 10health&armor per second
+	2011-10-09	-	SxDarkOne	-	privcmd.lua	-	Added !godregen. Gets muted from chat if used by a user with the right nickname. Nothing happends when a user without the right nickname uses the command.
+	2011-10-09	-	SxDarkOne	-	lus.lua		-	Added privcmd to the module list. This module will contain all the private/test commands that checks on usernames.
+	2011-10-08	-	SxDarkOne	-	helpcmd.lua	-	Added !premiumhelp. This will contain all available premium commands, and if the user isn't a VIP, it'll display a similar message as !packagehelp1 & 2 had.
+	2011-10-08	-	SxDarkOne	-	rm.lua		-	Changed the way to add rm's. The RM# is now automaticly assigned (to prevent empty RM's if some get removed)
+	2011-10-07	-	SxDarkOne	-	helpcmd.lua	-	Added all the rules in a table, a function to show a certain rule from the table and a command so players can see the rules (!rule #/!rules)
+	2011-10-06	-	SxDarkOne	-	upg.lua		-	Added all regens (except !godregen, for now)
+	2011-10-06	-	SxDarkOne	-	lus.lua		-	Added the custom script (troopdrop) for !trooptrans. Made it so it doesn't need two scripts, and doesn't re-attach the script to itself each time.
+	2011-10-06	-	SxDarkOne	-	veh.lua		-	Added !trooptrans. Edited it so it doubles the price if the team doesn't have a Vehicle Factory.
+	2011-10-06	-	SxDarkOne	-	mf.lua		-	Added TeamName(team), returns the team name (a string).
+	2011-10-04	-	Release: 2011-10-04. Test = OK
+	2011-10-03	-	SxDarkOne	-	ircmd.lua	-	Updated all irc.Send commands to the changes of using bb code and replaced most of them with Reply()
+	2011-10-03	-	SxDarkOne	-	ircmd.lua	-	Added Reply(Msg, User, IsPM), which will reply to User with Msg with a notice if IsPM is false or a PM if IsPM is true.
+	2011-10-03	-	SxDarkOne	-	ircuc.lua	-	Updated all irc.Send commands to the changes of using bb code.
+	2011-10-03	-	SxDarkOne	-	sc.lua		-	Updated all irc.Send commands to the changes of using bb code.
+	2011-10-03	-	SxDarkOne	-	tc.lua		-	Updated all irc.Send commands to the changes of using bb code.
+	2011-10-03	-	SxDarkOne	-	uc.lua		-	Updated all irc.Send commands to the changes of using bb code.
+	2011-10-03	-	SxDarkOne	-	usercmd.lua	-	Updated all irc.Send commands to the changes of using bb code.
+	2011-10-03	-	SxDarkOne	-	lus.lua		-	Updated all irc.Send commands to the changes of using bb code.
+	2011-10-03	-	SxDarkOne	-	irc.lua		-	SendNotice, SendPM, SendMsg now automaticly parses the message to replace BB code to the right characters for IRC.
+	2011-10-03	-	SxDarkOne	-	irc.lua		-	Removed ToBold, ToColor, ToItalic and ToUnderline and added ParseBB(msg). Returns a parsed message. can use [b]BoldMsg[/b], [n]NegativeMsg[/n], [u]UnderlineMsg[/u] and [c=##]ColoredMsg[/c]
+	2011-10-03	-	SxDarkOne	-	rm.lua		-	RM #45 now gives a random weapon to a random player (weapons are !rail, !pic, !ramjet or !volt)
+	2011-10-03	-	SxDarkOne	-	rm.lua		-	Updated the following RM Messages: #4, #8, #10, #11, #17, #20, #40, #95(reward), #103.
+	2011-10-01	-	Release: 2011-10-01. Test = OK
+	2011-10-01	-	SxDarkOne	-	sounds.lua	-	Updated the pattern for receiving the sound filename to remove spaces at the end.
+	2011-10-01	-	SxDarkOne	-	lus.lua		-	RM's are now between 5 and 120 seconds.
+	2011-10-01	-	DarkOrbit	-	sounds.txt	-	Added the majorty of the sounds
+	2011-10-01	-	SxDarkOne	-	helpcmd.lua	-	Added the !sounds helpcommand.
+	2011-10-01	-	SxDarkOne	-	sounds.lua	-	Added the table soundhelplist, that will contain an automatic generated list of sounds available.
+	2011-10-01	-	SxDarkOne	-	lus.lua		-	Added a call to sounds.Play() in the OnChat hook.
+	2011-10-01	-	SxDarkOne	-	sounds.lua	-	Added the function LoadSounds(). This will load all (valid) sounds in sounds.txt
+	2011-10-01	-	SxDarkOne	-	sounds.lua	-	Added the function Play(sound). this will check if sound exists and then plays it to everyone who wants to hear extra sounds.
+	2011-10-01	-	SxDarkOne	-	sounds.lua	-	Added sounds.lua
+	2011-10-01	-	SxDarkOne	-	sounds.txt	-	Added sounds.txt to the data folder, this file will contain all sounds.
+	2011-09-30	-	SxDarkOne	-	lus.lua		-	Checks if there's a player in-game before regenerating random messages.
+	2011-09-30	-	Release: 2011-09-30. Test = OK
+	2011-09-30	-	SxDarkOne	-	lus.lua		-	Added RM_Timer to the Timers() function, so it randomly calls a random messages
+	2011-09-30	-	SxDarkOne	-	rm.lua		-	Created rm.lua and added ALL the rm's to it. Converted so they are now an array of functions.
+	2011-09-30	-	SxDarkOne	-	irc.lua		-	Fixxed a bug which caused errors to be spammed infinitly if an error occured on a irc command.
+	2011-09-29	-	SxDarkOne	-	usercmd.lua	-	Added the command "!callmod". All authed mods on IRC will receive a pm.
+	2011-09-29	-	SxDarkOne	-	usercmd.lua	-	Added a check for the script version in the !soundon command.
+	2011-09-28	-	Release: 2011-09-28. Test = OK (after fixing a few stupid mistakes not worth mentioning, /selfhit)
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Temporarily added a callback function that calls the callback function in db.lua
+	2011-09-28	-	Release: 2011-09-28. Test = FAIL
+	2011-09-28	-	SxDarkOne	-	modcmd.lua	-	Added the code from the below named callback function to the !isprotected command
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_PasswordCheck.
+	2011-09-28	-	SxDarkOne	-	lotto.lua	-	Moved the AssignLoti function in the Execute function.
+	2011-09-28	-	SxDarkOne	-	lotto.lua	-	Moved the CountLoti function in the Execute function.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_AssignLoti.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_CountLoti.
+	2011-09-28	-	SxDarkOne	-	iruc.lua	-	Removed the method LoadAccess()
+	2011-09-28	-	SxDarkOne	-	iruc.lua	-	Added query_AuthIRC code to the Auth method.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_AuthIRC.
+	2011-09-28	-	SxDarkOne	-	uc.lua		-	Removed the method AssignData, it's merged into Login now.
+	2011-09-28	-	SxDarkOne	-	mf.lua		-	Removed the (useless) CompareString function.
+	2011-09-28	-	SxDarkOne	-	uc.lua		-	Added the code from query_LoadData in the Login method where the query is being executed.
+	2011-09-28	-	SxDarkOne	-	uc.lua		-	Added the code from query_UserCheck in the Login method where the query is being executed.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_LoadData.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_UserCheck.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Calling module.Command(pID, Message) is not static anymore. It walks through module_list and checks a bool if it should call .Command(pID, Message) for that module.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Added a 5th value for each table in the table module_list, that contains true or false. See above ^
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_Bancheck. Added the code in the Serial_Hook where the query is being executed.
+	2011-09-28	-	SxDarkOne	-	lus.lua		-	Removed the callback function query_JoinLog. Added the code in the Serial_Hook where the query is being executed.
+	2011-09-28	-	SxDarkOne	-	db.lua		-	Added db.lua, uses the dll Techno made. New way to interact with the database
+	2011-09-28	-	SxDarkOne	-	folder		-	Moved the lib folder in the lus folder. Added data in the lus folder (for sqlite & ini)
+	2011-09-28	-	But not really, LuaTT misses even more things then I at first noticed.
+	2011-09-27	-	Continued in the LuaTT folder
+	2011-09-26	-	ON HOLD TILL we can get a serialhash through a hook or function through LuaTT
+	2011-09-26	-	SxDarkOne	-	folder		-	Added the folder 'lib' for compiled libraries. Like the lsqlite.dll thanks to Technobulldog/Debugm0de.
+	2011-09-21	-	Release: 2011-09-21. Test = OK
+	2011-09-21	-	SxDarkOne	-	helpcmd.lua	-	Updated the current vehicle commands in the !veh help command.
+	2011-09-21	-	SxDarkOne	-	veh.lua		-	Added/Moved the following vehicle commands: !light, !demossm, !stank, !recon, !flame, !buggy, !arty
+	2011-09-20	-	SxDarkOne	-	helpcmd.lua	-	Added the current vehicle commands to the !veh help command.
+	2011-09-19	-	SxDarkOne	-	veh.lua		-	Added/Moved the following vehicle commands: !hovercraft, !gditrans, !nodtrans, !med, !mammy, !mrls, !gapc, !napc, !humvee
+	2011-09-18	-	SxDarkOne	-	upg.lua		-	Added something I forgot (gi.AddMoneySpend) to the weapons.
+	2011-09-18	-	SxDarkOne	-	helpcmd.lua	-	Removed !all from the !weapons help command.
+	2011-09-14	-	SxDarkOne	-	helpcmd.lua	-	Added a multi-line comment to see the "command tree".
+	2011-09-14	-	SxDarkOne	-	helpcmd.lua	-	Added the !weapons command with all available weapons.
+	2011-09-14	-	SxDarkOne	-	upg.lua		-	Added all !weapons commands.
+	2011-09-13	-	SxDarkOne	-	lus.lua		-	Added the module veh.lua
+	2011-09-13	-	SxDarkOne	-	helpcmd.lua	-	Added the help command !veh
+	2011-09-12	-	SxDarkOne	-	mf.lua		-	Added Get_Distance(Obj1, Obj2). Edited the calculation according to: http://en.wikipedia.org/wiki/Cartesian_coordinate_system#Distance_between_two_points
+	2011-09-12	-	SxDarkOne	-	lus.lua		-	Added the Suicide Block with the message to use !killme instead.
+	2011-09-12	-	SxDarkOne	-	mf.lua		-	Updated the Kick function, renamed it to QKick. ByID is now By, and is a string.
+	2011-09-12	-	SxDarkOne	-	uc.lua		-	Edited Welcome Message for when a player joins/logs in.
+	2011-09-10	-	SxDarkOne	-	uc.lua		-	Changed the object for the ultimate gun in !modpower to POW_Anti-Sound_Emitter
+	2011-09-10	-	SxDarkOne	-	Everything	-	Added every code to the Current folder and a stable folder :)
